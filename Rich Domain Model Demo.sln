@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rich Domain Model Demo", "Rich Domain Model Demo\Rich Domain Model Demo.csproj", "{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "DomainLogic\Logic.csproj", "{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {783B16A6-496F-40A4-A7BF-839ACEE6913B}
+	EndGlobalSection
+EndGlobal
