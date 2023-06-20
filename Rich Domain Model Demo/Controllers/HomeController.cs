@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Logic.Core.Services.UserServices;
+using Microsoft.AspNetCore.Mvc;
 using Rich_Domain_Model_Demo.Models;
 using System.Diagnostics;
 
@@ -8,9 +9,12 @@ namespace Rich_Domain_Model_Demo.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public UserService _userService { get; }
+
+        public HomeController(ILogger<HomeController> logger, UserService userService)
         {
             _logger = logger;
+            _userService = userService;
         }
 
         public IActionResult Index()
@@ -18,6 +22,9 @@ namespace Rich_Domain_Model_Demo.Controllers
             return View();
         }
 
+        [HttpGet("GetAll")]
+        public IActionResult Get() => Ok(_userService.GetUsers());
+        
         public IActionResult Privacy()
         {
             return View();

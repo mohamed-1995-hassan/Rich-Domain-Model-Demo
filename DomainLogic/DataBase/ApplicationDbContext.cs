@@ -1,6 +1,6 @@
-﻿using DomainLogic.Courses.Entities;
-using DomainLogic.Courses.Enums;
-using DomainLogic.Users.Entities;
+﻿using Logic.Domain.Courses.Entities;
+using Logic.Domain.Courses.Enums;
+using Logic.Domain.Users.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;

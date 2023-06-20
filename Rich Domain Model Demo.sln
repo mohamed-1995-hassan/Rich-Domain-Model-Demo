@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rich Domain Model Demo", "Rich Domain Model Demo\Rich Domain Model Demo.csproj", "{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ui", "Rich Domain Model Demo\Ui.csproj", "{17CBE4BB-0B8F-42C6-845F-7FBBF75AC358}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "DomainLogic\Logic.csproj", "{0D9BFC01-AD63-4FD1-B74B-02996E7C9701}"
 EndProject

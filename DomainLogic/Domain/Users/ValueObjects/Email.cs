@@ -1,12 +1,12 @@
 ﻿using DomainLogic.Common;
 using System.Text.RegularExpressions;
 
-namespace DomainLogic.Users.ValueObjects
+namespace Logic.Domain.Users.ValueObjects
 {
     public class Email : ValueObject<Email>
     {
         public string Value { get; }
-        public Email(string value) => Value = value;
+        protected Email(string value) => Value = value;
         public override bool GetEqualCore(Email other) => Value == other.Value;
         public static Result<Email> Create(string email)
         {
@@ -19,6 +19,9 @@ namespace DomainLogic.Users.ValueObjects
 
         public static implicit operator string(Email email) => email.Value;
 
-        public static explicit operator Email(string email) => Create(email).Value;
+        public static explicit operator Email(string email)
+        {
+            return Create(email).Value;
+        }
     }
 }

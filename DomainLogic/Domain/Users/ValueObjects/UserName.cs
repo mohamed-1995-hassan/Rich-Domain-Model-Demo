@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainLogic.Users.ValueObjects
+namespace Logic.Domain.Users.ValueObjects
 {
     public class UserName : ValueObject<UserName>
     {
@@ -23,7 +23,7 @@ namespace DomainLogic.Users.ValueObjects
             return Result.Ok(new UserName(customerName));
         }
 
-        public override bool GetEqualCore(UserName other) => 
+        public override bool GetEqualCore(UserName other) =>
             Value.Equals(other.Value, StringComparison.InvariantCultureIgnoreCase);
 
         public static implicit operator string(UserName username) => username.Value;

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainLogic.Users.ValueObjects
+namespace Logic.Domain.Users.ValueObjects
 {
     public class ExpirationDate : ValueObject<ExpirationDate>
     {
         protected ExpirationDate()
         {
-            
+
         }
         public ExpirationDate(DateTime? date) => Date = date;
         public DateTime? Date { get; }

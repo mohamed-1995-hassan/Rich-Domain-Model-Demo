@@ -1,5 +1,5 @@
-﻿using DomainLogic.Users.Entities;
-using DomainLogic.Users.ValueObjects;
+﻿using Logic.Domain.Users.Entities;
+using Logic.Domain.Users.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;

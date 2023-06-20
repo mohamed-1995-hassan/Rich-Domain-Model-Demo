@@ -1,24 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿
 using DomainLogic.Common;
-using DomainLogic.Courses.Entities;
-using DomainLogic.Users.ValueObjects;
+using Logic.Domain.Courses.Entities;
+using Logic.Domain.Users.ValueObjects;
 
-namespace DomainLogic.Users.Entities
+namespace Logic.Domain.Users.Entities
 {
     public class User : Entity
     {
-        private string _name;
-        private string _email;
-        private decimal _moneySpent;
-        public virtual UserName Name { get => (UserName)_name ; set => _name = value; }
-        public virtual Email Email { get => (Email)_email ; set => _email = value; }
-        public virtual Money MoneySpent { get => (Money)_moneySpent ; protected set => _moneySpent = value; }
+        public virtual UserName Name { get; set; }
+        public virtual Email Email { get; set; }
+        public virtual Money MoneySpent { get ; set; }
         public virtual UserStatus Status { get; set; }
         protected User() => _userCourseEnrolments = new List<UserCourseEnrolment>();
 
@@ -62,6 +53,8 @@ namespace DomainLogic.Users.Entities
         private readonly IList<UserCourseEnrolment> _userCourseEnrolments;
 
         public IReadOnlyList<UserCourseEnrolment> UserCourseEnrolments => _userCourseEnrolments.ToList();
+
+        
 
     }
 }

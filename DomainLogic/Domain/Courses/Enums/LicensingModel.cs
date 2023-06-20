@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainLogic.Courses.Enums
+namespace Logic.Domain.Courses.Enums
 {
     public enum LicensingModel
     {

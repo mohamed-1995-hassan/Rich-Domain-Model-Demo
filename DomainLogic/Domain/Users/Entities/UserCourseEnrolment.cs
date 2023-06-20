@@ -6,10 +6,10 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using DomainLogic.Common;
-using DomainLogic.Courses.Entities;
-using DomainLogic.Users.ValueObjects;
+using Logic.Domain.Courses.Entities;
+using Logic.Domain.Users.ValueObjects;
 
-namespace DomainLogic.Users.Entities
+namespace Logic.Domain.Users.Entities
 {
     public class UserCourseEnrolment : Entity
     {
@@ -17,7 +17,7 @@ namespace DomainLogic.Users.Entities
         private decimal _price;
         protected UserCourseEnrolment()
         {
-            
+
         }
         internal UserCourseEnrolment(User user, Course course, Money price, ExpirationDate expirationDate)
         {

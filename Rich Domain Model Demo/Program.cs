@@ -1,5 +1,7 @@
 using DomainLogic.DataBase;
 using DomainLogic.DataBase.Repositories;
+using Logic.Core.Services.UserServices;
+using Rich_Domain_Model_Demo.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ApplicationDbContext>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 
@@ -21,7 +24,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseMiddleware<ExceptionHandler>();
 app.UseRouting();
 
 app.UseAuthorization();

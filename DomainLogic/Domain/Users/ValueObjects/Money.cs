@@ -1,13 +1,13 @@
 ﻿using DomainLogic.Common;
 
-namespace DomainLogic.Users.ValueObjects
+namespace Logic.Domain.Users.ValueObjects
 {
     public class Money : ValueObject<Money>
     {
         public const int MAXIMUMBALANCE = 1000000;
         public bool IsZero => Value == 0;
         public decimal Value { get; }
-        protected Money(){}
+        protected Money() { }
         public Money(decimal moneyAmount) => Value = moneyAmount;
         public static Result<Money> AddBalance(decimal moneyAmount)
         {

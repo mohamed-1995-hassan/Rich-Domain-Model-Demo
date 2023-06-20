@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\Services\CourseServices\" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,7 @@
 ﻿using DomainLogic.Common;
-using DomainLogic.Courses.Enums;
-using DomainLogic.Users.ValueObjects;
+using Logic.Domain.Users.ValueObjects;
 
-namespace DomainLogic.Courses.Entities
+namespace Logic.Domain.Courses.Entities
 {
     public abstract class Course : Entity
     {
