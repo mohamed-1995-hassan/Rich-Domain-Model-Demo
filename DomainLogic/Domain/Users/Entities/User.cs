@@ -49,7 +49,7 @@ namespace Logic.Domain.Users.Entities
             x.StatusExpirationDate.Date >= DateTime.UtcNow.AddDays(-30)) < 2)
                 return Result.Fail("at least 2 active movies during the last 30 days");
 
-            if (UserCourseEnrolments.Where(x => x.PurchaseDate > DateTime.UtcNow.AddYears(-1)).Sum(x => x.Price) < 100m)
+            if (UserCourseEnrolments.Where(x => x.EnrolmentDate > DateTime.UtcNow.AddYears(-1)).Sum(x => x.Price) < 100m)
                 return Result.Fail("at least 100 dollars spent during the last year");
             return Result.Ok();
         }

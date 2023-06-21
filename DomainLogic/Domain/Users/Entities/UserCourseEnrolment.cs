@@ -33,13 +33,13 @@ namespace Logic.Domain.Users.Entities
 
             StatusExpirationDate = expirationDate;
 
-            PurchaseDate = DateTime.UtcNow;
+            EnrolmentDate = DateTime.UtcNow;
         }
         public Money Price { get; set; }
         public virtual ExpirationDate StatusExpirationDate { get; set; }
         public Course Course { get; set; }
         public User User { get; set; }
-        public virtual DateTime PurchaseDate { get; protected set; }
+        public virtual DateTime EnrolmentDate { get; protected set; }
 
     }
 }
