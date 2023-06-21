@@ -68,7 +68,6 @@ namespace DomainLogic.DataBase
                 .HasDiscriminator<int>(x => x.LicensingModel)
                 .HasValue<ShortTimeCourse>((int)LicensingModel.ShortTime)
                 .HasValue<LongTimeCourse>((int)LicensingModel.LongTime);
-
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }

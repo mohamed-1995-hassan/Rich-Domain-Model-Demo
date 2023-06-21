@@ -13,8 +13,6 @@ namespace Logic.Domain.Users.Entities
 {
     public class UserCourseEnrolment : Entity
     {
-        private DateTime? _statusExpirationDate;
-        private decimal _price;
         protected UserCourseEnrolment()
         {
 
@@ -37,12 +35,8 @@ namespace Logic.Domain.Users.Entities
 
             PurchaseDate = DateTime.UtcNow;
         }
-        public Money Price { get => (Money)_price; set => _price = value; }
-        public virtual ExpirationDate StatusExpirationDate
-        {
-            get => (ExpirationDate)_statusExpirationDate;
-            set => _statusExpirationDate = value;
-        }
+        public Money Price { get; set; }
+        public virtual ExpirationDate StatusExpirationDate { get; set; }
         public Course Course { get; set; }
         public User User { get; set; }
         public virtual DateTime PurchaseDate { get; protected set; }

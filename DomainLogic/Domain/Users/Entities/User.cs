@@ -2,17 +2,24 @@
 using DomainLogic.Common;
 using Logic.Domain.Courses.Entities;
 using Logic.Domain.Users.ValueObjects;
+using System.Xml.Linq;
 
 namespace Logic.Domain.Users.Entities
 {
     public class User : Entity
     {
-        public virtual UserName Name { get; set; }
-        public virtual Email Email { get; set; }
-        public virtual Money MoneySpent { get ; set; }
-        public virtual UserStatus Status { get; set; }
+        public virtual UserName Name { get; protected set; }
+        public virtual Email Email { get; protected set; }
+        public virtual Money MoneySpent { get ; protected set; }
+        public virtual UserStatus Status { get; protected set; }
         protected User() => _userCourseEnrolments = new List<UserCourseEnrolment>();
-
+        public User(UserName name, Email email) : this()
+        {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            Email = email ?? throw new ArgumentNullException(nameof(email));
+            Status = UserStatus.Basic;
+            MoneySpent = (Money)0;
+        }
         public void EnrolToCourse(Course course)
         {
             if (HasEnroledCourses(course))

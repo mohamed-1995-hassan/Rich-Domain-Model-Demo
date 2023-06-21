@@ -19,6 +19,8 @@ namespace Logic.Domain.Users.ValueObjects
         }
         public UserOfferingType Type { get; }
 
+        public static readonly UserStatus Basic = new UserStatus(UserOfferingType.Basic, ExpirationDate.Infinit);
+
         private DateTime? _expirationDate;
         public virtual ExpirationDate ExpirationDate { get => (ExpirationDate)_expirationDate; set => _expirationDate = value; }
         public decimal GetDiscount() => IsAdvanced ? .25m : 0m;
